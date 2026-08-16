@@ -3,39 +3,42 @@
 > Synthetic demonstration only - not for clinical use.
 
 **Case:** CASE-530C929832
-**Priority:** ROUTINE
+**Priority:** REVIEW SOON
 **Patient:** Maya Chen (SYN-1001)
 **Encounter:** 2026-08-10 to 2026-08-12 | North Valley Medical Center
 
 ## Summary
 
-No source-supported coordination alerts detected
+Maya Chen (SYN-1001): review soon for improving community-acquired pneumonia and scheduled primary care follow-up
 
-Maya Chen (SYN-1001) has 17 evidence-backed facts extracted from 3 synthetic source document(s).
+North Valley Medical Center encounter is documented with improving community-acquired pneumonia and stable hypertension. Azithromycin is new, and lisinopril is active. Creatinine, potassium, and white blood cell count are documented as normal. Drug allergies are denied. A primary care appointment/follow-up is scheduled.
 
-**Attention:** No deterministic review rule was triggered. This does not establish clinical safety; the source documents still require human review.
+**Attention:** Priority is REVIEW SOON. A pending-item flag requires ownership; the listed action is for the care-coordinator to assign an owner and due date for the pending item.
 
-**Uncertainty:** 1 cross-document discrepancy(ies) require verification.
+**Uncertainty:** Encounter timing is conflicting: 2026-08-10 to 2026-08-12, 2026-08-12, and 2026-08-12 07:10 are all documented. Pending-item status is also unclear: facts state no pending tests/no pending tests documented, while the flags identify an unresolved or pending item.
 
 ## Review flags
 
-- No deterministic review rule was triggered.
+- **REVIEW SOON - Pending item requires ownership:** The document explicitly identifies an unresolved or pending item.
+- **REVIEW SOON - Pending item requires ownership:** The document explicitly identifies an unresolved or pending item.
 
 ## Recommended coordination actions
 
-- Continue routine human review of the source documents.
+- **care-coordinator / REVIEW SOON:** Assign an owner and due date for the pending item.
 
 ## Evidence-backed facts
 
 - **Allergy - drug allergies:** drug allergies (high confidence)
   - `discharge_summary.pdf, page 1`: "No known drug allergies (NKDA)."
   - `physician_note.txt, page 1`: "No known drug allergies."
-- **Condition - Condition:** Community-acquired pneumonia (high confidence)
-  - `discharge_summary.pdf, page 1`: "Community-acquired pneumonia, improving."
+- **Condition - Condition:** Community-acquired pneumonia is improving (medium confidence)
   - `physician_note.txt, page 1`: "Community-acquired pneumonia is improving."
-- **Condition - Condition:** Hypertension (high confidence)
-  - `discharge_summary.pdf, page 1`: "Hypertension, stable."
+- **Condition - Condition:** Community-acquired pneumonia, improving. (medium confidence)
+  - `discharge_summary.pdf, page 1`: "Community-acquired pneumonia, improving."
+- **Condition - Condition:** Hypertension is stable (medium confidence)
   - `physician_note.txt, page 1`: "Hypertension is stable."
+- **Condition - Condition:** Hypertension, stable. (medium confidence)
+  - `discharge_summary.pdf, page 1`: "Hypertension, stable."
 - **Encounter - encounter_date:** 2026-08-10 to 2026-08-12 (low confidence)
   - `discharge_summary.pdf, page 1`: "Encounter 2026-08-10 to 2026-08-12"
 - **Encounter - encounter_date:** 2026-08-12 (low confidence)
@@ -73,10 +76,14 @@ Maya Chen (SYN-1001) has 17 evidence-backed facts extracted from 3 synthetic sou
 - **Medication - Lisinopril:** Lisinopril - 10 mg - by mouth - once daily (high confidence)
   - `discharge_summary.pdf, page 1`: "Lisinopril 10 mg by mouth once daily - active."
   - `physician_note.txt, page 1`: "lisinopril 10 mg by mouth once daily remains active"
+- **Pending_Item - Pending item:** No pending tests (medium confidence)
+  - `physician_note.txt, page 1`: "No pending tests or urgent alerts are documented."
+- **Pending_Item - Pending item:** No pending tests documented. (medium confidence)
+  - `discharge_summary.pdf, page 1`: "No pending tests documented."
 
 ## Processing metadata
 
-- Model: `gemini-3.6-flash`
+- Model: `gpt-5.6-terra`
 - Pipeline: `1.0.0`
 - Evidence coverage: 100%
-- Duration: 79.71 seconds
+- Duration: 20.03 seconds

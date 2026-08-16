@@ -4,17 +4,17 @@
   "patient_display": "Avery Singh (SYN-3003)",
   "encounter_display": "2026-08-15",
   "narrative": {
-    "headline": "Review Soon: 2 evidence-supported review item(s)",
-    "summary": "Avery Singh (SYN-3003) has 7 evidence-backed facts extracted from 1 synthetic source document(s).",
-    "attention_summary": "Follow-up details are incomplete; Pending item requires ownership",
-    "uncertainty_summary": "No cross-document contradictions were detected in the supplied sources."
+    "headline": "Avery Singh (SYN-3003) — review soon: incomplete follow-up details and unassigned pending item",
+    "summary": "Encounter dated 2026-08-15. A follow-up request is documented, but follow-up details are incomplete. A pending item is documented: patient-reported information; verification pending.",
+    "attention_summary": "Care-coordinator: confirm the follow-up provider, timeframe, and appointment status. Assign an owner and due date for the pending item.",
+    "uncertainty_summary": "Sulfa allergy is recorded as uncertain (“Sulfa?”). The follow-up request status is unknown. Patient-reported information remains pending verification; no follow-up provider, timeframe, or appointment status is provided."
   },
   "facts": [
     {
-      "fact_id": "FACT-742A08A617",
+      "fact_id": "FACT-BF14721811",
       "category": "allergy",
-      "label": "Sulfa",
-      "value": "Sulfa",
+      "label": "Sulfa?",
+      "value": "Sulfa?",
       "qualifiers": {
         "reaction": null
       },
@@ -25,7 +25,7 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "Sulfa? handwriting unclear"
+          "quote": "DRUG ALLERGIES Sulfa? handwriting unclear"
         }
       ]
     },
@@ -42,7 +42,7 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "2026-08-15"
+          "quote": "ENCOUNTER DATE 2026-08-15"
         }
       ]
     },
@@ -55,14 +55,14 @@
         "provider": null,
         "timeframe": null
       },
-      "status": "pending",
+      "status": "unknown",
       "confidence": "medium",
       "evidence": [
         {
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "Follow-up request"
+          "quote": "PRIMARY CONCERN Follow-up request"
         }
       ]
     },
@@ -79,7 +79,7 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "1979-02-14"
+          "quote": "DATE OF BIRTH 1979-02-14"
         }
       ]
     },
@@ -96,7 +96,7 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "SYN-3003"
+          "quote": "PATIENT ID SYN-3003"
         }
       ]
     },
@@ -113,17 +113,17 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "Avery Singh"
+          "quote": "PATIENT NAME Avery Singh"
         }
       ]
     },
     {
-      "fact_id": "FACT-54F1B218FC",
+      "fact_id": "FACT-CB65304761",
       "category": "pending_item",
       "label": "Pending item",
-      "value": "Verification of patient-reported information",
+      "value": "Patient-reported information; verification pending.",
       "qualifiers": {},
-      "status": "current",
+      "status": "unknown",
       "confidence": "medium",
       "evidence": [
         {
@@ -147,7 +147,7 @@
           "source_id": "SRC-C84BEC47",
           "filename": "degraded_intake.png",
           "page": 1,
-          "quote": "Follow-up request"
+          "quote": "PRIMARY CONCERN Follow-up request"
         }
       ]
     },
@@ -186,16 +186,16 @@
   ],
   "review_queue": [],
   "source_summaries": {
-    "degraded_intake.png": "This patient intake form for Avery Singh dated August 15, 2026, details a primary concern of a follow-up request, a potential sulfa drug allergy with unclear handwriting, and pending verification of patient-reported information."
+    "degraded_intake.png": "Patient intake form for Avery Singh lists a follow-up request, an unclear possible Sulfa allergy, and patient-reported information with verification pending."
   },
   "evidence_coverage": 1.0,
   "metadata": {
-    "model_id": "gemini-3.6-flash",
+    "model_id": "gpt-5.6-terra",
     "prompt_version": "extract-v1.0",
     "pipeline_version": "1.0.0",
-    "duration_seconds": 35.15,
+    "duration_seconds": 7.4,
     "source_count": 1,
-    "generated_at_utc": "2026-08-15T11:27:58.872435+00:00",
+    "generated_at_utc": "2026-08-16T07:03:48.439535+00:00",
     "warnings": []
   }
 }

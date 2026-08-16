@@ -1,13 +1,13 @@
 {
   "case_id": "CASE-530C929832",
-  "priority": "ROUTINE",
+  "priority": "REVIEW SOON",
   "patient_display": "Maya Chen (SYN-1001)",
   "encounter_display": "2026-08-10 to 2026-08-12 | North Valley Medical Center",
   "narrative": {
-    "headline": "No source-supported coordination alerts detected",
-    "summary": "Maya Chen (SYN-1001) has 17 evidence-backed facts extracted from 3 synthetic source document(s).",
-    "attention_summary": "No deterministic review rule was triggered. This does not establish clinical safety; the source documents still require human review.",
-    "uncertainty_summary": "1 cross-document discrepancy(ies) require verification."
+    "headline": "Maya Chen (SYN-1001): review soon for improving community-acquired pneumonia and scheduled primary care follow-up",
+    "summary": "North Valley Medical Center encounter is documented with improving community-acquired pneumonia and stable hypertension. Azithromycin is new, and lisinopril is active. Creatinine, potassium, and white blood cell count are documented as normal. Drug allergies are denied. A primary care appointment/follow-up is scheduled.",
+    "attention_summary": "Priority is REVIEW SOON. A pending-item flag requires ownership; the listed action is for the care-coordinator to assign an owner and due date for the pending item.",
+    "uncertainty_summary": "Encounter timing is conflicting: 2026-08-10 to 2026-08-12, 2026-08-12, and 2026-08-12 07:10 are all documented. Pending-item status is also unclear: facts state no pending tests/no pending tests documented, while the flags identify an unresolved or pending item."
   },
   "facts": [
     {
@@ -36,20 +36,14 @@
       ]
     },
     {
-      "fact_id": "FACT-DE3EF8975C",
+      "fact_id": "FACT-9556A7851E",
       "category": "condition",
       "label": "Condition",
-      "value": "Community-acquired pneumonia",
+      "value": "Community-acquired pneumonia is improving",
       "qualifiers": {},
       "status": "current",
-      "confidence": "high",
+      "confidence": "medium",
       "evidence": [
-        {
-          "source_id": "SRC-CEA7C69A",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "Community-acquired pneumonia, improving."
-        },
         {
           "source_id": "SRC-5A839F99",
           "filename": "physician_note.txt",
@@ -59,25 +53,53 @@
       ]
     },
     {
-      "fact_id": "FACT-A2A1EEB106",
+      "fact_id": "FACT-4B40BC023B",
       "category": "condition",
       "label": "Condition",
-      "value": "Hypertension",
+      "value": "Community-acquired pneumonia, improving.",
       "qualifiers": {},
       "status": "current",
-      "confidence": "high",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-CEA7C69A",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Community-acquired pneumonia, improving."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-9FD359FA58",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Hypertension is stable",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5A839F99",
+          "filename": "physician_note.txt",
+          "page": 1,
+          "quote": "Hypertension is stable."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-A45ED8855B",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Hypertension, stable.",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
       "evidence": [
         {
           "source_id": "SRC-CEA7C69A",
           "filename": "discharge_summary.pdf",
           "page": 1,
           "quote": "Hypertension, stable."
-        },
-        {
-          "source_id": "SRC-5A839F99",
-          "filename": "physician_note.txt",
-          "page": 1,
-          "quote": "Hypertension is stable."
         }
       ]
     },
@@ -401,6 +423,40 @@
           "quote": "lisinopril 10 mg by mouth once daily remains active"
         }
       ]
+    },
+    {
+      "fact_id": "FACT-E0ED9FB2A7",
+      "category": "pending_item",
+      "label": "Pending item",
+      "value": "No pending tests",
+      "qualifiers": {},
+      "status": "negated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5A839F99",
+          "filename": "physician_note.txt",
+          "page": 1,
+          "quote": "No pending tests or urgent alerts are documented."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-6CA665D531",
+      "category": "pending_item",
+      "label": "Pending item",
+      "value": "No pending tests documented.",
+      "qualifiers": {},
+      "status": "negated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-CEA7C69A",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No pending tests documented."
+        }
+      ]
     }
   ],
   "discrepancies": [
@@ -436,8 +492,46 @@
       ]
     }
   ],
-  "flags": [],
-  "actions": [],
+  "flags": [
+    {
+      "rule_id": "PENDING_ITEM",
+      "priority": "REVIEW SOON",
+      "title": "Pending item requires ownership",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "evidence": [
+        {
+          "source_id": "SRC-5A839F99",
+          "filename": "physician_note.txt",
+          "page": 1,
+          "quote": "No pending tests or urgent alerts are documented."
+        }
+      ]
+    },
+    {
+      "rule_id": "PENDING_ITEM",
+      "priority": "REVIEW SOON",
+      "title": "Pending item requires ownership",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "evidence": [
+        {
+          "source_id": "SRC-CEA7C69A",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No pending tests documented."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "ACT-A98C42343F",
+      "owner": "care-coordinator",
+      "urgency": "REVIEW SOON",
+      "action": "Assign an owner and due date for the pending item.",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "rule_id": "PENDING_ITEM"
+    }
+  ],
   "review_queue": [
     "FACT-BD671537A6",
     "FACT-3EB3C4230C",
@@ -445,18 +539,18 @@
     "DISC-6E86464152"
   ],
   "source_summaries": {
-    "discharge_summary.pdf": "Maya Chen was discharged home on 2026-08-12 from North Valley Medical Center following an encounter for improving community-acquired pneumonia and stable hypertension.",
-    "lab_report.pdf": "Laboratory report for Maya Chen collected on 2026-08-12 showing normal results for white blood cell count, potassium, and creatinine.",
-    "physician_note.txt": "Physician follow-up note for Maya Chen documenting an encounter at North Valley Medical Center on 2026-08-12 for improving community-acquired pneumonia and stable hypertension."
+    "discharge_summary.pdf": "Discharge summary documenting improving community-acquired pneumonia, stable hypertension, new azithromycin, active lisinopril, and a scheduled primary care appointment on 2026-08-19.",
+    "lab_report.pdf": "Laboratory report collected 2026-08-12 07:10 lists normal white blood cell count, potassium, and creatinine results, with no critical or abnormal results flagged.",
+    "physician_note.txt": "Physician follow-up note documenting improving community-acquired pneumonia, stable hypertension, new azithromycin, active lisinopril, and scheduled primary care follow-up on 2026-08-19."
   },
   "evidence_coverage": 1.0,
   "metadata": {
-    "model_id": "gemini-3.6-flash",
+    "model_id": "gpt-5.6-terra",
     "prompt_version": "extract-v1.0",
     "pipeline_version": "1.0.0",
-    "duration_seconds": 79.71,
+    "duration_seconds": 20.03,
     "source_count": 3,
-    "generated_at_utc": "2026-08-15T11:27:23.550573+00:00",
+    "generated_at_utc": "2026-08-16T07:03:17.252160+00:00",
     "warnings": []
   }
 }

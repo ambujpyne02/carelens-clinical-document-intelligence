@@ -98,7 +98,6 @@ python scripts/generate_synthetic_data.py
 - `sample_data/` — source documents, manifest, and golden expectations.
 - `tests/` — deterministic, mocked-integration, UI-startup, and opt-in live tests.
 - `scripts/run_evaluation.py` — live golden-case evaluation and saved outputs.
-- `ACCEPTANCE_PLAN.md` — rubric mapping and five-minute demo script.
 - `EVALUATION_REPORT.md` — most recent live acceptance run.
 - `output/` — evaluation evidence and the required five-slide deck.
 

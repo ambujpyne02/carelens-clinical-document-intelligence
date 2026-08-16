@@ -9,13 +9,13 @@
 
 ## Summary
 
-Review Soon: 2 evidence-supported review item(s)
+Avery Singh (SYN-3003) — review soon: incomplete follow-up details and unassigned pending item
 
-Avery Singh (SYN-3003) has 7 evidence-backed facts extracted from 1 synthetic source document(s).
+Encounter dated 2026-08-15. A follow-up request is documented, but follow-up details are incomplete. A pending item is documented: patient-reported information; verification pending.
 
-**Attention:** Follow-up details are incomplete; Pending item requires ownership
+**Attention:** Care-coordinator: confirm the follow-up provider, timeframe, and appointment status. Assign an owner and due date for the pending item.
 
-**Uncertainty:** No cross-document contradictions were detected in the supplied sources.
+**Uncertainty:** Sulfa allergy is recorded as uncertain (“Sulfa?”). The follow-up request status is unknown. Patient-reported information remains pending verification; no follow-up provider, timeframe, or appointment status is provided.
 
 ## Review flags
 
@@ -29,24 +29,24 @@ Avery Singh (SYN-3003) has 7 evidence-backed facts extracted from 1 synthetic so
 
 ## Evidence-backed facts
 
-- **Allergy - Sulfa:** Sulfa (medium confidence)
-  - `degraded_intake.png, page 1`: "Sulfa? handwriting unclear"
+- **Allergy - Sulfa?:** Sulfa? (medium confidence)
+  - `degraded_intake.png, page 1`: "DRUG ALLERGIES Sulfa? handwriting unclear"
 - **Encounter - encounter_date:** 2026-08-15 (medium confidence)
-  - `degraded_intake.png, page 1`: "2026-08-15"
+  - `degraded_intake.png, page 1`: "ENCOUNTER DATE 2026-08-15"
 - **Follow_Up - Follow-up:** Follow-up request (medium confidence)
-  - `degraded_intake.png, page 1`: "Follow-up request"
+  - `degraded_intake.png, page 1`: "PRIMARY CONCERN Follow-up request"
 - **Identity - date_of_birth:** 1979-02-14 (medium confidence)
-  - `degraded_intake.png, page 1`: "1979-02-14"
+  - `degraded_intake.png, page 1`: "DATE OF BIRTH 1979-02-14"
 - **Identity - patient_id:** SYN-3003 (medium confidence)
-  - `degraded_intake.png, page 1`: "SYN-3003"
+  - `degraded_intake.png, page 1`: "PATIENT ID SYN-3003"
 - **Identity - patient_name:** Avery Singh (medium confidence)
-  - `degraded_intake.png, page 1`: "Avery Singh"
-- **Pending_Item - Pending item:** Verification of patient-reported information (medium confidence)
+  - `degraded_intake.png, page 1`: "PATIENT NAME Avery Singh"
+- **Pending_Item - Pending item:** Patient-reported information; verification pending. (medium confidence)
   - `degraded_intake.png, page 1`: "Patient-reported information; verification pending."
 
 ## Processing metadata
 
-- Model: `gemini-3.6-flash`
+- Model: `gpt-5.6-terra`
 - Pipeline: `1.0.0`
 - Evidence coverage: 100%
-- Duration: 35.15 seconds
+- Duration: 7.40 seconds

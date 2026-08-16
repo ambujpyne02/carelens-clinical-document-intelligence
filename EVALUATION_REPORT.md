@@ -1,24 +1,24 @@
 # CareLens Evaluation Report
 
-- Generated (UTC): 2026-08-15T11:27:58.872435+00:00
-- Model: `gemini-3.6-flash`
-- Grounded narrative synthesis: `disabled`
-- Overall: **PASS** (25/25 checks)
+- Generated (UTC): 2026-08-16T07:03:48.441357+00:00
+- Model: `gpt-5.6-terra`
+- Grounded narrative synthesis: `enabled`
+- Overall: **FAIL** (23/25 checks)
 - Data: synthetic only
 
 The checks below compare live pipeline outputs with intentionally compact golden expectations. They test routing, key fact recall, conflict rules, and evidence coverage; they are not a clinical validation.
 
-## case_a - PASS
+## case_a - FAIL
 
-- Checks: 10/10
-- Observed priority: `ROUTINE`
-- Facts: 17
+- Checks: 9/10
+- Observed priority: `REVIEW SOON`
+- Facts: 21
 - Evidence coverage: 100%
-- Duration: 79.71s
+- Duration: 20.03s
 
 | Check | Result |
 |---|---|
-| `priority` | PASS |
+| `priority` | FAIL |
 | `value:Maya Chen` | PASS |
 | `value:SYN-1001` | PASS |
 | `value:Azithromycin` | PASS |
@@ -29,13 +29,13 @@ The checks below compare live pipeline outputs with intentionally compact golden
 | `forbidden_rule:SOURCE_CRITICAL_LAB` | PASS |
 | `all_facts_have_evidence` | PASS |
 
-## case_b - PASS
+## case_b - FAIL
 
-- Checks: 13/13
+- Checks: 12/13
 - Observed priority: `REVIEW NOW`
-- Facts: 20
+- Facts: 29
 - Evidence coverage: 100%
-- Duration: 161.25s
+- Duration: 23.76s
 
 | Check | Result |
 |---|---|
@@ -45,7 +45,7 @@ The checks below compare live pipeline outputs with intentionally compact golden
 | `value:Penicillin` | PASS |
 | `value:Metoprolol` | PASS |
 | `value:6.2` | PASS |
-| `required_rule:ALLERGY_RECORD_CONFLICT` | PASS |
+| `required_rule:ALLERGY_RECORD_CONFLICT` | FAIL |
 | `required_rule:MEDICATION_RECONCILIATION` | PASS |
 | `required_rule:SOURCE_CRITICAL_LAB` | PASS |
 | `required_rule:FOLLOW_UP_INCOMPLETE` | PASS |
@@ -53,16 +53,13 @@ The checks below compare live pipeline outputs with intentionally compact golden
 | `forbidden_rule:IDENTITY_MISMATCH` | PASS |
 | `all_facts_have_evidence` | PASS |
 
-Warnings:
-- lab_report.pdf: Gemini request failed: Server disconnected without sending a response.
-
 ## case_c - PASS
 
 - Checks: 2/2
 - Observed priority: `REVIEW SOON`
 - Facts: 7
 - Evidence coverage: 100%
-- Duration: 35.15s
+- Duration: 7.40s
 
 | Check | Result |
 |---|---|

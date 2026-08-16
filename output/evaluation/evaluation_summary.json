@@ -1,17 +1,17 @@
 {
-  "generated_at_utc": "2026-08-15T11:27:58.872435+00:00",
-  "model": "gemini-3.6-flash",
-  "synthesis_enabled": false,
-  "all_passed": true,
+  "generated_at_utc": "2026-08-16T07:03:48.440879+00:00",
+  "model": "gpt-5.6-terra",
+  "synthesis_enabled": true,
+  "all_passed": false,
   "cases": [
     {
       "case_id": "case_a",
       "evaluation": {
-        "passed": true,
-        "checks_passed": 10,
+        "passed": false,
+        "checks_passed": 9,
         "checks_total": 10,
         "checks": {
-          "priority": true,
+          "priority": false,
           "value:Maya Chen": true,
           "value:SYN-1001": true,
           "value:Azithromycin": true,
@@ -22,19 +22,21 @@
           "forbidden_rule:SOURCE_CRITICAL_LAB": true,
           "all_facts_have_evidence": true
         },
-        "observed_priority": "ROUTINE",
-        "observed_rule_ids": [],
-        "fact_count": 17,
+        "observed_priority": "REVIEW SOON",
+        "observed_rule_ids": [
+          "PENDING_ITEM"
+        ],
+        "fact_count": 21,
         "evidence_coverage": 1.0,
-        "duration_seconds": 79.71,
+        "duration_seconds": 20.03,
         "warnings": []
       }
     },
     {
       "case_id": "case_b",
       "evaluation": {
-        "passed": true,
-        "checks_passed": 13,
+        "passed": false,
+        "checks_passed": 12,
         "checks_total": 13,
         "checks": {
           "priority": true,
@@ -43,7 +45,7 @@
           "value:Penicillin": true,
           "value:Metoprolol": true,
           "value:6.2": true,
-          "required_rule:ALLERGY_RECORD_CONFLICT": true,
+          "required_rule:ALLERGY_RECORD_CONFLICT": false,
           "required_rule:MEDICATION_RECONCILIATION": true,
           "required_rule:SOURCE_CRITICAL_LAB": true,
           "required_rule:FOLLOW_UP_INCOMPLETE": true,
@@ -53,19 +55,16 @@
         },
         "observed_priority": "REVIEW NOW",
         "observed_rule_ids": [
-          "ALLERGY_RECORD_CONFLICT",
           "FOLLOW_UP_INCOMPLETE",
           "MEDICATION_RECONCILIATION",
           "PENDING_ITEM",
           "SOURCE_CRITICAL_LAB",
           "SOURCE_EXPLICIT_ALERT"
         ],
-        "fact_count": 20,
+        "fact_count": 29,
         "evidence_coverage": 1.0,
-        "duration_seconds": 161.25,
-        "warnings": [
-          "lab_report.pdf: Gemini request failed: Server disconnected without sending a response."
-        ]
+        "duration_seconds": 23.76,
+        "warnings": []
       }
     },
     {
@@ -85,7 +84,7 @@
         ],
         "fact_count": 7,
         "evidence_coverage": 1.0,
-        "duration_seconds": 35.15,
+        "duration_seconds": 7.4,
         "warnings": []
       }
     }
