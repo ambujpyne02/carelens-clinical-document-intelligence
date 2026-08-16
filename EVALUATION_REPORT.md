@@ -1,24 +1,24 @@
 # CareLens Evaluation Report
 
-- Generated (UTC): 2026-08-16T07:03:48.441357+00:00
+- Generated (UTC): 2026-08-16T08:23:22.157128+00:00
 - Model: `gpt-5.6-terra`
 - Grounded narrative synthesis: `enabled`
-- Overall: **FAIL** (23/25 checks)
+- Overall: **PASS** (25/25 checks)
 - Data: synthetic only
 
 The checks below compare live pipeline outputs with intentionally compact golden expectations. They test routing, key fact recall, conflict rules, and evidence coverage; they are not a clinical validation.
 
-## case_a - FAIL
+## case_a - PASS
 
-- Checks: 9/10
-- Observed priority: `REVIEW SOON`
+- Checks: 10/10
+- Observed priority: `ROUTINE`
 - Facts: 21
 - Evidence coverage: 100%
-- Duration: 20.03s
+- Duration: 20.08s
 
 | Check | Result |
 |---|---|
-| `priority` | FAIL |
+| `priority` | PASS |
 | `value:Maya Chen` | PASS |
 | `value:SYN-1001` | PASS |
 | `value:Azithromycin` | PASS |
@@ -29,13 +29,13 @@ The checks below compare live pipeline outputs with intentionally compact golden
 | `forbidden_rule:SOURCE_CRITICAL_LAB` | PASS |
 | `all_facts_have_evidence` | PASS |
 
-## case_b - FAIL
+## case_b - PASS
 
-- Checks: 12/13
+- Checks: 13/13
 - Observed priority: `REVIEW NOW`
-- Facts: 29
+- Facts: 31
 - Evidence coverage: 100%
-- Duration: 23.76s
+- Duration: 27.41s
 
 | Check | Result |
 |---|---|
@@ -45,7 +45,7 @@ The checks below compare live pipeline outputs with intentionally compact golden
 | `value:Penicillin` | PASS |
 | `value:Metoprolol` | PASS |
 | `value:6.2` | PASS |
-| `required_rule:ALLERGY_RECORD_CONFLICT` | FAIL |
+| `required_rule:ALLERGY_RECORD_CONFLICT` | PASS |
 | `required_rule:MEDICATION_RECONCILIATION` | PASS |
 | `required_rule:SOURCE_CRITICAL_LAB` | PASS |
 | `required_rule:FOLLOW_UP_INCOMPLETE` | PASS |
@@ -59,7 +59,7 @@ The checks below compare live pipeline outputs with intentionally compact golden
 - Observed priority: `REVIEW SOON`
 - Facts: 7
 - Evidence coverage: 100%
-- Duration: 7.40s
+- Duration: 7.46s
 
 | Check | Result |
 |---|---|

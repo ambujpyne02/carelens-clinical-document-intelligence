@@ -1,32 +1,26 @@
 {
   "case_id": "CASE-530C929832",
-  "priority": "REVIEW SOON",
+  "priority": "ROUTINE",
   "patient_display": "Maya Chen (SYN-1001)",
   "encounter_display": "2026-08-10 to 2026-08-12 | North Valley Medical Center",
   "narrative": {
-    "headline": "Maya Chen (SYN-1001): review soon for improving community-acquired pneumonia and scheduled primary care follow-up",
-    "summary": "North Valley Medical Center encounter is documented with improving community-acquired pneumonia and stable hypertension. Azithromycin is new, and lisinopril is active. Creatinine, potassium, and white blood cell count are documented as normal. Drug allergies are denied. A primary care appointment/follow-up is scheduled.",
-    "attention_summary": "Priority is REVIEW SOON. A pending-item flag requires ownership; the listed action is for the care-coordinator to assign an owner and due date for the pending item.",
-    "uncertainty_summary": "Encounter timing is conflicting: 2026-08-10 to 2026-08-12, 2026-08-12, and 2026-08-12 07:10 are all documented. Pending-item status is also unclear: facts state no pending tests/no pending tests documented, while the flags identify an unresolved or pending item."
+    "headline": "Routine post-discharge coordination for Maya Chen (SYN-1001) following North Valley Medical Center encounter.",
+    "summary": "Community-acquired pneumonia is improving; hypertension is stable. Maya Chen was discharged home in stable condition. Active/new medications documented are lisinopril 10 mg by mouth once daily and azithromycin 250 mg by mouth once daily for 4 days. Creatinine, potassium, and white blood cell count were documented as normal. No known drug allergies are documented. Primary care follow-up is scheduled, and no pending tests are documented.",
+    "attention_summary": "Priority is ROUTINE. Confirm completion of the scheduled primary care follow-up. No flags or additional actions are listed.",
+    "uncertainty_summary": "Encounter dates are discrepant: documentation lists both 2026-08-10 to 2026-08-12 and 2026-08-12. The primary care follow-up is listed as scheduled, but no date or time is provided."
   },
   "facts": [
     {
-      "fact_id": "FACT-CBE2EA0682",
+      "fact_id": "FACT-B380399917",
       "category": "allergy",
-      "label": "drug allergies",
-      "value": "drug allergies",
+      "label": "No known drug allergies",
+      "value": "No known drug allergies",
       "qualifiers": {
         "reaction": null
       },
       "status": "denied",
-      "confidence": "high",
+      "confidence": "medium",
       "evidence": [
-        {
-          "source_id": "SRC-CEA7C69A",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "No known drug allergies (NKDA)."
-        },
         {
           "source_id": "SRC-5A839F99",
           "filename": "physician_note.txt",
@@ -36,10 +30,29 @@
       ]
     },
     {
+      "fact_id": "FACT-D48534E276",
+      "category": "allergy",
+      "label": "No known drug allergies (NKDA)",
+      "value": "No known drug allergies (NKDA)",
+      "qualifiers": {
+        "reaction": null
+      },
+      "status": "denied",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-CEA7C69A",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        }
+      ]
+    },
+    {
       "fact_id": "FACT-9556A7851E",
       "category": "condition",
       "label": "Condition",
-      "value": "Community-acquired pneumonia is improving",
+      "value": "Community-acquired pneumonia is improving.",
       "qualifiers": {},
       "status": "current",
       "confidence": "medium",
@@ -70,10 +83,27 @@
       ]
     },
     {
+      "fact_id": "FACT-C05E7EC773",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Discharged home in stable condition.",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-CEA7C69A",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Discharged home in stable condition."
+        }
+      ]
+    },
+    {
       "fact_id": "FACT-9FD359FA58",
       "category": "condition",
       "label": "Condition",
-      "value": "Hypertension is stable",
+      "value": "Hypertension is stable.",
       "qualifiers": {},
       "status": "current",
       "confidence": "medium",
@@ -134,23 +164,6 @@
           "filename": "physician_note.txt",
           "page": 1,
           "quote": "Encounter date: 2026-08-12"
-        }
-      ]
-    },
-    {
-      "fact_id": "FACT-F984B1B833",
-      "category": "encounter",
-      "label": "encounter_date",
-      "value": "2026-08-12 07:10",
-      "qualifiers": {},
-      "status": "stated",
-      "confidence": "low",
-      "evidence": [
-        {
-          "source_id": "SRC-A8A30558",
-          "filename": "lab_report.pdf",
-          "page": 1,
-          "quote": "Collected 2026-08-12 07:10"
         }
       ]
     },
@@ -425,23 +438,6 @@
       ]
     },
     {
-      "fact_id": "FACT-E0ED9FB2A7",
-      "category": "pending_item",
-      "label": "Pending item",
-      "value": "No pending tests",
-      "qualifiers": {},
-      "status": "negated",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "source_id": "SRC-5A839F99",
-          "filename": "physician_note.txt",
-          "page": 1,
-          "quote": "No pending tests or urgent alerts are documented."
-        }
-      ]
-    },
-    {
       "fact_id": "FACT-6CA665D531",
       "category": "pending_item",
       "label": "Pending item",
@@ -461,13 +457,12 @@
   ],
   "discrepancies": [
     {
-      "discrepancy_id": "DISC-6E86464152",
+      "discrepancy_id": "DISC-598A59798A",
       "category": "other",
       "title": "Conflicting encounter date",
       "values": [
         "2026-08-10 to 2026-08-12",
-        "2026-08-12",
-        "2026-08-12 07:10"
+        "2026-08-12"
       ],
       "severity": "medium",
       "evidence": [
@@ -478,12 +473,6 @@
           "quote": "Encounter 2026-08-10 to 2026-08-12"
         },
         {
-          "source_id": "SRC-A8A30558",
-          "filename": "lab_report.pdf",
-          "page": 1,
-          "quote": "Collected 2026-08-12 07:10"
-        },
-        {
           "source_id": "SRC-5A839F99",
           "filename": "physician_note.txt",
           "page": 1,
@@ -492,55 +481,16 @@
       ]
     }
   ],
-  "flags": [
-    {
-      "rule_id": "PENDING_ITEM",
-      "priority": "REVIEW SOON",
-      "title": "Pending item requires ownership",
-      "rationale": "The document explicitly identifies an unresolved or pending item.",
-      "evidence": [
-        {
-          "source_id": "SRC-5A839F99",
-          "filename": "physician_note.txt",
-          "page": 1,
-          "quote": "No pending tests or urgent alerts are documented."
-        }
-      ]
-    },
-    {
-      "rule_id": "PENDING_ITEM",
-      "priority": "REVIEW SOON",
-      "title": "Pending item requires ownership",
-      "rationale": "The document explicitly identifies an unresolved or pending item.",
-      "evidence": [
-        {
-          "source_id": "SRC-CEA7C69A",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "No pending tests documented."
-        }
-      ]
-    }
-  ],
-  "actions": [
-    {
-      "action_id": "ACT-A98C42343F",
-      "owner": "care-coordinator",
-      "urgency": "REVIEW SOON",
-      "action": "Assign an owner and due date for the pending item.",
-      "rationale": "The document explicitly identifies an unresolved or pending item.",
-      "rule_id": "PENDING_ITEM"
-    }
-  ],
+  "flags": [],
+  "actions": [],
   "review_queue": [
     "FACT-BD671537A6",
     "FACT-3EB3C4230C",
-    "FACT-F984B1B833",
-    "DISC-6E86464152"
+    "DISC-598A59798A"
   ],
   "source_summaries": {
-    "discharge_summary.pdf": "Discharge summary documenting improving community-acquired pneumonia, stable hypertension, new azithromycin, active lisinopril, and a scheduled primary care appointment on 2026-08-19.",
-    "lab_report.pdf": "Laboratory report collected 2026-08-12 07:10 lists normal white blood cell count, potassium, and creatinine results, with no critical or abnormal results flagged.",
+    "discharge_summary.pdf": "Discharge summary documents improving community-acquired pneumonia, stable hypertension, new azithromycin, active lisinopril, and a scheduled primary care appointment with Dr. Nair for 2026-08-19.",
+    "lab_report.pdf": "Laboratory report for Maya Chen collected 2026-08-12 07:10 shows normal white blood cell count, potassium, and creatinine results.",
     "physician_note.txt": "Physician follow-up note documenting improving community-acquired pneumonia, stable hypertension, new azithromycin, active lisinopril, and scheduled primary care follow-up on 2026-08-19."
   },
   "evidence_coverage": 1.0,
@@ -548,9 +498,9 @@
     "model_id": "gpt-5.6-terra",
     "prompt_version": "extract-v1.0",
     "pipeline_version": "1.0.0",
-    "duration_seconds": 20.03,
+    "duration_seconds": 20.08,
     "source_count": 3,
-    "generated_at_utc": "2026-08-16T07:03:17.252160+00:00",
+    "generated_at_utc": "2026-08-16T08:22:47.257161+00:00",
     "warnings": []
   }
 }

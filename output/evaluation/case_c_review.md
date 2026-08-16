@@ -9,13 +9,13 @@
 
 ## Summary
 
-Avery Singh (SYN-3003) — review soon: incomplete follow-up details and unassigned pending item
+Avery Singh (SYN-3003) — review soon for incomplete follow-up and pending-item ownership
 
-Encounter dated 2026-08-15. A follow-up request is documented, but follow-up details are incomplete. A pending item is documented: patient-reported information; verification pending.
+Encounter date: 2026-08-15. A follow-up request is documented, but details are incomplete. Patient-reported information remains pending verification.
 
 **Attention:** Care-coordinator: confirm the follow-up provider, timeframe, and appointment status. Assign an owner and due date for the pending item.
 
-**Uncertainty:** Sulfa allergy is recorded as uncertain (“Sulfa?”). The follow-up request status is unknown. Patient-reported information remains pending verification; no follow-up provider, timeframe, or appointment status is provided.
+**Uncertainty:** Sulfa allergy status is unknown. The follow-up provider, timeframe, and appointment status are not provided. The pending patient-reported information has not yet been verified.
 
 ## Review flags
 
@@ -29,7 +29,7 @@ Encounter dated 2026-08-15. A follow-up request is documented, but follow-up det
 
 ## Evidence-backed facts
 
-- **Allergy - Sulfa?:** Sulfa? (medium confidence)
+- **Allergy - Sulfa:** Sulfa (medium confidence)
   - `degraded_intake.png, page 1`: "DRUG ALLERGIES Sulfa? handwriting unclear"
 - **Encounter - encounter_date:** 2026-08-15 (medium confidence)
   - `degraded_intake.png, page 1`: "ENCOUNTER DATE 2026-08-15"
@@ -49,4 +49,4 @@ Encounter dated 2026-08-15. A follow-up request is documented, but follow-up det
 - Model: `gpt-5.6-terra`
 - Pipeline: `1.0.0`
 - Evidence coverage: 100%
-- Duration: 7.40 seconds
+- Duration: 7.46 seconds

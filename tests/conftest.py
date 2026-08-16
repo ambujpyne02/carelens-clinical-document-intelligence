@@ -96,6 +96,7 @@ def conflict_documents() -> list[DocumentFacts]:
                 substance="No known drug allergies",
                 reaction=None,
                 status="denied",
+                scope="general",
                 page=1,
                 quote="No known drug allergies (NKDA).",
             )
@@ -156,6 +157,7 @@ def conflict_documents() -> list[DocumentFacts]:
                 substance="Penicillin",
                 reaction="rash",
                 status="confirmed",
+                scope="specific",
                 page=1,
                 quote="Penicillin - rash (confirmed).",
             )

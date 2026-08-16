@@ -60,6 +60,7 @@ class AllergyFact(StrictModel):
     substance: str
     reaction: str | None
     status: Literal["confirmed", "denied", "historical", "unknown"]
+    scope: Literal["specific", "general"]
     page: int | None
     quote: str
 

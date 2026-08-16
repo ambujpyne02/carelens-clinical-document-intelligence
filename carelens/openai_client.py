@@ -47,6 +47,16 @@ is absent. Each fact must contain a short verbatim quote and the one-based physi
 page number when available. Keep quotes under 220 characters. An explicit alert
 must be supported by words such as critical, urgent, STAT, or immediate in the
 source; do not create an alert from your own medical knowledge.
+
+For every allergy fact, set `scope` to "general" or "specific" based on what the
+statement covers, independent of how you word the `substance` field:
+- "general": the statement is a blanket denial or confirmation covering allergies
+  in general, not one named substance. Example: "NKDA", "No known drug allergies",
+  or "Denies any allergies" is `scope: "general"`, `status: "denied"`.
+- "specific": the statement addresses one named substance. Example:
+  "Penicillin - rash, confirmed" is `scope: "specific"`, `status: "confirmed"`,
+  `substance: "Penicillin"`. "Denies penicillin allergy" is `scope: "specific"`,
+  `status: "denied"`, `substance: "Penicillin"`.
 """.strip()
 
 EXTRACTION_USER_PROMPT = """

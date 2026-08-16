@@ -4,10 +4,10 @@
   "patient_display": "Jordan Lee (SYN-2002)",
   "encounter_display": "2026-08-14 | North Valley Medical Center",
   "narrative": {
-    "headline": "REVIEW NOW: source-labelled critical potassium result and urgent clinician-review alerts",
-    "summary": "Jordan Lee (SYN-2002) had an encounter at North Valley Medical Center documented as 2026-08-14. The record lists potassium 6.2 mmol/L as critical and includes critical-result notification, clinician-review-required, and urgent clinician-review-required alerts. Current conditions listed are atrial fibrillation and hypertension. Creatinine is listed as 1.1 mg/dL (normal). Confirmed allergy: penicillin (rash).",
-    "attention_summary": "Clinician: review the source-labelled urgent alert and critical potassium result and document disposition. Nurse: reconcile metoprolol dose, frequency, route, and current status. Care coordinator: confirm follow-up provider, timeframe, and appointment status; assign an owner and due date for the pending repeat potassium item. Cardiology follow-up is pending; clinician review and primary care follow-up are recommended.",
-    "uncertainty_summary": "Metoprolol documentation conflicts: 25 mg by mouth twice daily active versus 50 mg by mouth twice daily listed as both active and changed. Encounter timing is inconsistent across sources: 2026-08-13 to 2026-08-14, 2026-08-14, and 2026-08-14 09:35. Repeat potassium/test remains pending, and verification is pending. Follow-up provider, timeframe, and appointment status are incomplete. A general denial of drug allergies is also documented despite confirmed penicillin allergy (rash)."
+    "headline": "REVIEW NOW: Source-labelled critical potassium result requires clinician review",
+    "summary": "Jordan Lee (SYN-2002) had an encounter at North Valley Medical Center documented on 2026-08-14. Potassium was 6.2 mmol/L and labelled critical in the source; creatinine was 1.1 mg/dL and labelled normal. Current conditions include atrial fibrillation, hypertension, and post-discharge medication and lab review. Cardiology follow-up is pending; primary care follow-up and clinician review are recommended.",
+    "attention_summary": "The source contains urgent alerts, including critical potassium and clinician review requirements. A clinician is assigned to review the source-labelled urgent alert and critical result and document disposition. Repeat potassium remains pending and requires an assigned owner and due date. Care coordination should confirm the follow-up provider, timeframe, and appointment status.",
+    "uncertainty_summary": "Allergy documentation conflicts: NKDA is recorded alongside confirmed penicillin allergy with rash; reconciliation against the authoritative patient record is assigned. Metoprolol documentation conflicts between 25 mg by mouth twice daily active and 50 mg by mouth twice daily listed as active and changed; dose, route, frequency, and current status require reconciliation. Encounter dates differ across sources (2026-08-13 to 2026-08-14, 2026-08-14, and 2026-08-14 09:35). Verification of patient-reported information is pending."
   },
   "facts": [
     {
@@ -15,74 +15,6 @@
       "category": "alert",
       "label": "Source alert",
       "value": "Clinician review required",
-      "qualifiers": {},
-      "status": "urgent",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "source_id": "SRC-5F4AC6FA",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "Urgent clinician review is required."
-        }
-      ]
-    },
-    {
-      "fact_id": "FACT-18101CC0E0",
-      "category": "alert",
-      "label": "Source alert",
-      "value": "Critical potassium result",
-      "qualifiers": {},
-      "status": "critical",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "source_id": "SRC-4C41DE90",
-          "filename": "progress_note.txt",
-          "page": null,
-          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
-        }
-      ]
-    },
-    {
-      "fact_id": "FACT-7A609A7AF0",
-      "category": "alert",
-      "label": "Source alert",
-      "value": "Critical result notification",
-      "qualifiers": {},
-      "status": "critical",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "source_id": "SRC-3BCBC930",
-          "filename": "lab_report.pdf",
-          "page": 1,
-          "quote": "Critical result notification: urgent clinician review required."
-        }
-      ]
-    },
-    {
-      "fact_id": "FACT-EB9D3347F3",
-      "category": "alert",
-      "label": "Source alert",
-      "value": "Potassium 6.2 mmol/L",
-      "qualifiers": {},
-      "status": "critical",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "source_id": "SRC-5F4AC6FA",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L."
-        }
-      ]
-    },
-    {
-      "fact_id": "FACT-2A1916B73E",
-      "category": "alert",
-      "label": "Source alert",
-      "value": "Urgent clinician review required",
       "qualifiers": {},
       "status": "urgent",
       "confidence": "medium",
@@ -96,15 +28,83 @@
       ]
     },
     {
-      "fact_id": "FACT-CBE2EA0682",
+      "fact_id": "FACT-3C938723A4",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Critical high potassium",
+      "qualifiers": {},
+      "status": "critical",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-3BCBC930",
+          "filename": "lab_report.pdf",
+          "page": 1,
+          "quote": "Potassium: 6.2 mmol/L (reference 3.5-5.1) - CRITICAL HIGH."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-90637B2228",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Critical potassium result requiring urgent clinician review",
+      "qualifiers": {},
+      "status": "critical",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L. Urgent clinician review is required."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-AA1EE1A630",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Potassium 6.2 mmol/L documented as a critical result",
+      "qualifiers": {},
+      "status": "critical",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": null,
+          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-2A1916B73E",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Urgent clinician review required",
+      "qualifiers": {},
+      "status": "urgent",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-3BCBC930",
+          "filename": "lab_report.pdf",
+          "page": 1,
+          "quote": "Critical result notification: urgent clinician review required."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-D48534E276",
       "category": "allergy",
-      "label": "drug allergies",
-      "value": "drug allergies",
+      "label": "No known drug allergies (NKDA)",
+      "value": "No known drug allergies (NKDA)",
       "qualifiers": {
         "reaction": null
       },
       "status": "denied",
-      "confidence": "medium",
+      "confidence": "low",
       "evidence": [
         {
           "source_id": "SRC-5F4AC6FA",
@@ -123,19 +123,19 @@
         "reaction": "rash"
       },
       "status": "confirmed",
-      "confidence": "high",
+      "confidence": "low",
       "evidence": [
         {
           "source_id": "SRC-4C41DE90",
           "filename": "progress_note.txt",
           "page": null,
-          "quote": "Allergy list: Penicillin - rash (confirmed)."
+          "quote": "Penicillin - rash (confirmed)."
         },
         {
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "DRUG ALLERGIES\nPenicillin - rash"
+          "quote": "DRUG ALLERGIES Penicillin - rash"
         }
       ]
     },
@@ -170,6 +170,23 @@
           "filename": "discharge_summary.pdf",
           "page": 1,
           "quote": "Hypertension, current."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-9584EEC37B",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Post-discharge medication and lab review",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "PRIMARY CONCERN Post-discharge medication and lab review"
         }
       ]
     },
@@ -209,7 +226,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "ENCOUNTER DATE\n2026-08-14"
+          "quote": "ENCOUNTER DATE 2026-08-14"
         }
       ]
     },
@@ -314,6 +331,26 @@
       ]
     },
     {
+      "fact_id": "FACT-44E2022BD5",
+      "category": "follow_up",
+      "label": "Follow-up",
+      "value": "Repeat potassium",
+      "qualifiers": {
+        "provider": null,
+        "timeframe": null
+      },
+      "status": "pending",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-3BCBC930",
+          "filename": "lab_report.pdf",
+          "page": 1,
+          "quote": "Repeat potassium is pending."
+        }
+      ]
+    },
+    {
       "fact_id": "FACT-EAA66666A6",
       "category": "identity",
       "label": "date_of_birth",
@@ -344,7 +381,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "DATE OF BIRTH\n1957-11-03"
+          "quote": "DATE OF BIRTH 1957-11-03"
         }
       ]
     },
@@ -379,7 +416,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "PATIENT ID\nSYN-2002"
+          "quote": "PATIENT ID SYN-2002"
         }
       ]
     },
@@ -414,7 +451,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "PATIENT NAME\nJordan Lee"
+          "quote": "PATIENT NAME Jordan Lee"
         }
       ]
     },
@@ -549,7 +586,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "CURRENT MEDICATION\nMetoprolol 50 mg by mouth twice daily"
+          "quote": "CURRENT MEDICATION Metoprolol 50 mg by mouth twice daily"
         }
       ]
     },
@@ -593,7 +630,7 @@
       "label": "Pending item",
       "value": "Repeat potassium test remains pending.",
       "qualifiers": {},
-      "status": "current",
+      "status": "unknown",
       "confidence": "medium",
       "evidence": [
         {
@@ -605,10 +642,10 @@
       ]
     },
     {
-      "fact_id": "FACT-BD60DAACF1",
+      "fact_id": "FACT-54F1B218FC",
       "category": "pending_item",
       "label": "Pending item",
-      "value": "verification pending",
+      "value": "Verification of patient-reported information",
       "qualifiers": {},
       "status": "unknown",
       "confidence": "medium",
@@ -623,6 +660,36 @@
     }
   ],
   "discrepancies": [
+    {
+      "discrepancy_id": "DISC-569E2AAD33",
+      "category": "allergy",
+      "title": "NKDA conflicts with a documented drug allergy",
+      "values": [
+        "No known drug allergies (NKDA)",
+        "Penicillin"
+      ],
+      "severity": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": null,
+          "quote": "Penicillin - rash (confirmed)."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "DRUG ALLERGIES Penicillin - rash"
+        }
+      ]
+    },
     {
       "discrepancy_id": "DISC-37186D40BF",
       "category": "medication",
@@ -650,7 +717,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "CURRENT MEDICATION\nMetoprolol 50 mg by mouth twice daily"
+          "quote": "CURRENT MEDICATION Metoprolol 50 mg by mouth twice daily"
         }
       ]
     },
@@ -687,12 +754,66 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "ENCOUNTER DATE\n2026-08-14"
+          "quote": "ENCOUNTER DATE 2026-08-14"
         }
       ]
     }
   ],
   "flags": [
+    {
+      "rule_id": "ALLERGY_RECORD_CONFLICT",
+      "priority": "REVIEW NOW",
+      "title": "Conflicting allergy documentation",
+      "rationale": "The sources do not agree on allergy status; a human must reconcile the record.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": null,
+          "quote": "Penicillin - rash (confirmed)."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "DRUG ALLERGIES Penicillin - rash"
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_EXPLICIT_ALERT",
+      "priority": "REVIEW NOW",
+      "title": "Source document contains an explicit urgent alert",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": null,
+          "quote": "Urgent clinician review required."
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_EXPLICIT_ALERT",
+      "priority": "REVIEW NOW",
+      "title": "Source document contains an explicit urgent alert",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "evidence": [
+        {
+          "source_id": "SRC-3BCBC930",
+          "filename": "lab_report.pdf",
+          "page": 1,
+          "quote": "Potassium: 6.2 mmol/L (reference 3.5-5.1) - CRITICAL HIGH."
+        }
+      ]
+    },
     {
       "rule_id": "SOURCE_EXPLICIT_ALERT",
       "priority": "REVIEW NOW",
@@ -703,7 +824,7 @@
           "source_id": "SRC-5F4AC6FA",
           "filename": "discharge_summary.pdf",
           "page": 1,
-          "quote": "Urgent clinician review is required."
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L. Urgent clinician review is required."
         }
       ]
     },
@@ -732,34 +853,6 @@
           "filename": "lab_report.pdf",
           "page": 1,
           "quote": "Critical result notification: urgent clinician review required."
-        }
-      ]
-    },
-    {
-      "rule_id": "SOURCE_EXPLICIT_ALERT",
-      "priority": "REVIEW NOW",
-      "title": "Source document contains an explicit urgent alert",
-      "rationale": "Urgency is copied from the source document and requires clinician review.",
-      "evidence": [
-        {
-          "source_id": "SRC-5F4AC6FA",
-          "filename": "discharge_summary.pdf",
-          "page": 1,
-          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L."
-        }
-      ]
-    },
-    {
-      "rule_id": "SOURCE_EXPLICIT_ALERT",
-      "priority": "REVIEW NOW",
-      "title": "Source document contains an explicit urgent alert",
-      "rationale": "Urgency is copied from the source document and requires clinician review.",
-      "evidence": [
-        {
-          "source_id": "SRC-4C41DE90",
-          "filename": "progress_note.txt",
-          "page": null,
-          "quote": "Urgent clinician review required."
         }
       ]
     },
@@ -812,6 +905,20 @@
       ]
     },
     {
+      "rule_id": "FOLLOW_UP_INCOMPLETE",
+      "priority": "REVIEW SOON",
+      "title": "Follow-up details are incomplete",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "evidence": [
+        {
+          "source_id": "SRC-3BCBC930",
+          "filename": "lab_report.pdf",
+          "page": 1,
+          "quote": "Repeat potassium is pending."
+        }
+      ]
+    },
+    {
       "rule_id": "MEDICATION_RECONCILIATION",
       "priority": "REVIEW SOON",
       "title": "Medication details require reconciliation",
@@ -833,7 +940,7 @@
           "source_id": "SRC-2810D5A0",
           "filename": "intake_form.png",
           "page": 1,
-          "quote": "CURRENT MEDICATION\nMetoprolol 50 mg by mouth twice daily"
+          "quote": "CURRENT MEDICATION Metoprolol 50 mg by mouth twice daily"
         }
       ]
     },
@@ -912,6 +1019,14 @@
       "rule_id": "SOURCE_CRITICAL_LAB"
     },
     {
+      "action_id": "ACT-A3333E670E",
+      "owner": "nurse",
+      "urgency": "REVIEW NOW",
+      "action": "Reconcile allergy status against the authoritative patient record.",
+      "rationale": "The sources do not agree on allergy status; a human must reconcile the record.",
+      "rule_id": "ALLERGY_RECORD_CONFLICT"
+    },
+    {
       "action_id": "ACT-A402C95B42",
       "owner": "care-coordinator",
       "urgency": "REVIEW SOON",
@@ -937,29 +1052,32 @@
     }
   ],
   "review_queue": [
+    "FACT-D48534E276",
+    "FACT-84E6B4B942",
     "FACT-9E422A2C2B",
     "FACT-5B09A04B6C",
     "FACT-90AF17DEAF",
     "FACT-99996A1579",
     "FACT-273BA57C51",
     "FACT-273BA57C51",
+    "DISC-569E2AAD33",
     "DISC-37186D40BF",
     "DISC-48EA22B930"
   ],
   "source_summaries": {
-    "discharge_summary.pdf": "Discharge summary documenting current atrial fibrillation and hypertension, active metoprolol, a critical potassium result of 6.2 mmol/L, a pending repeat potassium test, and recommended primary care follow-up within one week.",
-    "lab_report.pdf": "Laboratory report collected 2026-08-14 09:35 reporting potassium 6.2 mmol/L as CRITICAL HIGH and creatinine 1.1 mg/dL as normal, with urgent clinician review required and repeat potassium pending.",
-    "progress_note.txt": "Progress note documents a critical potassium result of 6.2 mmol/L, changed metoprolol dose, confirmed penicillin allergy with rash, and pending repeat potassium test and cardiology follow-up.",
-    "intake_form.png": "Patient intake form lists Jordan Lee’s demographics, penicillin allergy with rash, current metoprolol, and a primary concern of post-discharge medication and lab review."
+    "discharge_summary.pdf": "Discharge summary for Jordan Lee documenting current atrial fibrillation and hypertension, active metoprolol, a critical potassium result, a pending repeat potassium test, and recommended primary care follow-up within one week.",
+    "lab_report.pdf": "Laboratory report for Jordan Lee collected 2026-08-14 09:35 showing potassium 6.2 mmol/L labeled CRITICAL HIGH and creatinine 1.1 mg/dL labeled normal, with urgent clinician review required and repeat potassium pending.",
+    "progress_note.txt": "Progress note documenting a confirmed penicillin rash allergy, changed metoprolol dose, critical potassium result, pending repeat potassium test, and pending cardiology follow-up.",
+    "intake_form.png": "Patient intake form documents Jordan Lee's reported penicillin allergy with rash, current metoprolol 50 mg by mouth twice daily, and a primary concern of post-discharge medication and lab review."
   },
   "evidence_coverage": 1.0,
   "metadata": {
     "model_id": "gpt-5.6-terra",
     "prompt_version": "extract-v1.0",
     "pipeline_version": "1.0.0",
-    "duration_seconds": 23.76,
+    "duration_seconds": 27.41,
     "source_count": 4,
-    "generated_at_utc": "2026-08-16T07:03:41.039932+00:00",
+    "generated_at_utc": "2026-08-16T08:23:14.690957+00:00",
     "warnings": []
   }
 }

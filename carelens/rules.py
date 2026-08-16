@@ -113,7 +113,10 @@ def evaluate_rules(
                     fact.evidence,
                 )
             )
-        elif fact.category == "pending_item":
+        elif fact.category == "pending_item" and fact.status not in {
+            "negated",
+            "resolved",
+        }:
             flags.append(
                 _flag(
                     "PENDING_ITEM",

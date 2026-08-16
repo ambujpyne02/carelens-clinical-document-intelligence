@@ -255,7 +255,7 @@ def merge_documents(
                 )
             )
 
-    # Allergies, including NKDA versus a stated allergy.
+    # Allergies, including a general denial versus a stated allergy.
     allergy_groups: dict[str, dict[tuple[str, str], dict[str, Any]]] = defaultdict(dict)
     all_allergy_records: list[dict[str, Any]] = []
     for document in documents:
@@ -268,18 +268,19 @@ def merge_documents(
                     "substance": item.substance,
                     "reaction": item.reaction,
                     "status": item.status,
+                    "scope": item.scope,
                     "evidence": [],
                 },
             )
             record["evidence"].append(_provenance(document, item.page, item.quote))
             all_allergy_records.append(record)
 
-    nkda_keys = {"nkda", "no known drug allergies", "no known allergies"}
-    has_nkda = any(key in nkda_keys for key in allergy_groups)
+    has_nkda = any(
+        record["status"] == "denied" and record["scope"] == "general"
+        for record in all_allergy_records
+    )
     has_confirmed = any(
-        key not in nkda_keys
-        and any(record["status"] == "confirmed" for record in variants.values())
-        for key, variants in allergy_groups.items()
+        record["status"] == "confirmed" for record in all_allergy_records
     )
     global_allergy_conflict = has_nkda and has_confirmed
     for variants in allergy_groups.values():
