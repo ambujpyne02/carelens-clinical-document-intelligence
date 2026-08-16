@@ -1,0 +1,4 @@
+{
+  "behavior": "Do not assign high confidence to image-only facts without corroboration.",
+  "max_confidence": "medium"
+}

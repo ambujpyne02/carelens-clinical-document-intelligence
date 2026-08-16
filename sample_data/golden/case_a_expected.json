@@ -1,0 +1,16 @@
+{
+  "priority": "ROUTINE",
+  "required_values": [
+    "Maya Chen",
+    "SYN-1001",
+    "Azithromycin",
+    "Lisinopril",
+    "2026-08-19"
+  ],
+  "required_rules": [],
+  "forbidden_rules": [
+    "IDENTITY_MISMATCH",
+    "ALLERGY_RECORD_CONFLICT",
+    "SOURCE_CRITICAL_LAB"
+  ]
+}

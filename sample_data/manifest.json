@@ -1,0 +1,37 @@
+{
+  "dataset_notice": "All records are fictional and contain no real patient data.",
+  "cases": {
+    "case_a": {
+      "label": "Routine transition - consistent records",
+      "description": "Three consistent documents with a scheduled follow-up and no source-labelled alerts.",
+      "files": [
+        "sample_data/case_a_routine/discharge_summary.pdf",
+        "sample_data/case_a_routine/lab_report.pdf",
+        "sample_data/case_a_routine/physician_note.txt"
+      ],
+      "golden": "sample_data/golden/case_a_expected.json",
+      "show_in_app": true
+    },
+    "case_b": {
+      "label": "Review now - conflicts and critical result",
+      "description": "Four documents with an explicit critical lab, allergy conflict, dose discrepancy, and pending follow-up.",
+      "files": [
+        "sample_data/case_b_review_now/discharge_summary.pdf",
+        "sample_data/case_b_review_now/lab_report.pdf",
+        "sample_data/case_b_review_now/progress_note.txt",
+        "sample_data/case_b_review_now/intake_form.png"
+      ],
+      "golden": "sample_data/golden/case_b_expected.json",
+      "show_in_app": true
+    },
+    "case_c": {
+      "label": "Degraded image - uncertainty handling",
+      "description": "A deliberately low-contrast scan used to validate cautious extraction behavior.",
+      "files": [
+        "sample_data/case_c_degraded/degraded_intake.png"
+      ],
+      "golden": "sample_data/golden/case_c_expected.json",
+      "show_in_app": false
+    }
+  }
+}

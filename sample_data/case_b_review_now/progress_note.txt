@@ -1,0 +1,10 @@
+SYNTHETIC DEMO - NOT A REAL PATIENT
+Progress note
+Patient: Jordan Lee | Patient ID: SYN-2002 | DOB: 1957-11-03
+Encounter date: 2026-08-14 | North Valley Medical Center
+
+Allergy list: Penicillin - rash (confirmed).
+Medication list: Metoprolol 50 mg by mouth twice daily - changed dose.
+Potassium 6.2 mmol/L is documented as a critical result. Urgent clinician review required.
+Repeat potassium test remains pending.
+Cardiology follow-up is pending; provider is cardiology and the appointment date is not specified.

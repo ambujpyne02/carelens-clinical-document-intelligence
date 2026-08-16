@@ -1,0 +1,93 @@
+{
+  "generated_at_utc": "2026-08-15T11:27:58.872435+00:00",
+  "model": "gemini-3.6-flash",
+  "synthesis_enabled": false,
+  "all_passed": true,
+  "cases": [
+    {
+      "case_id": "case_a",
+      "evaluation": {
+        "passed": true,
+        "checks_passed": 10,
+        "checks_total": 10,
+        "checks": {
+          "priority": true,
+          "value:Maya Chen": true,
+          "value:SYN-1001": true,
+          "value:Azithromycin": true,
+          "value:Lisinopril": true,
+          "value:2026-08-19": true,
+          "forbidden_rule:IDENTITY_MISMATCH": true,
+          "forbidden_rule:ALLERGY_RECORD_CONFLICT": true,
+          "forbidden_rule:SOURCE_CRITICAL_LAB": true,
+          "all_facts_have_evidence": true
+        },
+        "observed_priority": "ROUTINE",
+        "observed_rule_ids": [],
+        "fact_count": 17,
+        "evidence_coverage": 1.0,
+        "duration_seconds": 79.71,
+        "warnings": []
+      }
+    },
+    {
+      "case_id": "case_b",
+      "evaluation": {
+        "passed": true,
+        "checks_passed": 13,
+        "checks_total": 13,
+        "checks": {
+          "priority": true,
+          "value:Jordan Lee": true,
+          "value:SYN-2002": true,
+          "value:Penicillin": true,
+          "value:Metoprolol": true,
+          "value:6.2": true,
+          "required_rule:ALLERGY_RECORD_CONFLICT": true,
+          "required_rule:MEDICATION_RECONCILIATION": true,
+          "required_rule:SOURCE_CRITICAL_LAB": true,
+          "required_rule:FOLLOW_UP_INCOMPLETE": true,
+          "required_rule:PENDING_ITEM": true,
+          "forbidden_rule:IDENTITY_MISMATCH": true,
+          "all_facts_have_evidence": true
+        },
+        "observed_priority": "REVIEW NOW",
+        "observed_rule_ids": [
+          "ALLERGY_RECORD_CONFLICT",
+          "FOLLOW_UP_INCOMPLETE",
+          "MEDICATION_RECONCILIATION",
+          "PENDING_ITEM",
+          "SOURCE_CRITICAL_LAB",
+          "SOURCE_EXPLICIT_ALERT"
+        ],
+        "fact_count": 20,
+        "evidence_coverage": 1.0,
+        "duration_seconds": 161.25,
+        "warnings": [
+          "lab_report.pdf: Gemini request failed: Server disconnected without sending a response."
+        ]
+      }
+    },
+    {
+      "case_id": "case_c",
+      "evaluation": {
+        "passed": true,
+        "checks_passed": 2,
+        "checks_total": 2,
+        "checks": {
+          "max_confidence:medium": true,
+          "all_facts_have_evidence": true
+        },
+        "observed_priority": "REVIEW SOON",
+        "observed_rule_ids": [
+          "FOLLOW_UP_INCOMPLETE",
+          "PENDING_ITEM"
+        ],
+        "fact_count": 7,
+        "evidence_coverage": 1.0,
+        "duration_seconds": 35.15,
+        "warnings": []
+      }
+    }
+  ]
+}

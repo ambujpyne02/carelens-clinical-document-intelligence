@@ -1,0 +1,201 @@
+{
+  "case_id": "CASE-6F37D909B7",
+  "priority": "REVIEW SOON",
+  "patient_display": "Avery Singh (SYN-3003)",
+  "encounter_display": "2026-08-15",
+  "narrative": {
+    "headline": "Review Soon: 2 evidence-supported review item(s)",
+    "summary": "Avery Singh (SYN-3003) has 7 evidence-backed facts extracted from 1 synthetic source document(s).",
+    "attention_summary": "Follow-up details are incomplete; Pending item requires ownership",
+    "uncertainty_summary": "No cross-document contradictions were detected in the supplied sources."
+  },
+  "facts": [
+    {
+      "fact_id": "FACT-742A08A617",
+      "category": "allergy",
+      "label": "Sulfa",
+      "value": "Sulfa",
+      "qualifiers": {
+        "reaction": null
+      },
+      "status": "unknown",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Sulfa? handwriting unclear"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-D20CE73C60",
+      "category": "encounter",
+      "label": "encounter_date",
+      "value": "2026-08-15",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "2026-08-15"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-5CF5588A07",
+      "category": "follow_up",
+      "label": "Follow-up",
+      "value": "Follow-up request",
+      "qualifiers": {
+        "provider": null,
+        "timeframe": null
+      },
+      "status": "pending",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Follow-up request"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-3A81203E35",
+      "category": "identity",
+      "label": "date_of_birth",
+      "value": "1979-02-14",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "1979-02-14"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-7B4EBD8696",
+      "category": "identity",
+      "label": "patient_id",
+      "value": "SYN-3003",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "SYN-3003"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-F85313A45B",
+      "category": "identity",
+      "label": "patient_name",
+      "value": "Avery Singh",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Avery Singh"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-54F1B218FC",
+      "category": "pending_item",
+      "label": "Pending item",
+      "value": "Verification of patient-reported information",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Patient-reported information; verification pending."
+        }
+      ]
+    }
+  ],
+  "discrepancies": [],
+  "flags": [
+    {
+      "rule_id": "FOLLOW_UP_INCOMPLETE",
+      "priority": "REVIEW SOON",
+      "title": "Follow-up details are incomplete",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Follow-up request"
+        }
+      ]
+    },
+    {
+      "rule_id": "PENDING_ITEM",
+      "priority": "REVIEW SOON",
+      "title": "Pending item requires ownership",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "evidence": [
+        {
+          "source_id": "SRC-C84BEC47",
+          "filename": "degraded_intake.png",
+          "page": 1,
+          "quote": "Patient-reported information; verification pending."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "ACT-A402C95B42",
+      "owner": "care-coordinator",
+      "urgency": "REVIEW SOON",
+      "action": "Confirm the follow-up provider, timeframe, and appointment status.",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "rule_id": "FOLLOW_UP_INCOMPLETE"
+    },
+    {
+      "action_id": "ACT-A98C42343F",
+      "owner": "care-coordinator",
+      "urgency": "REVIEW SOON",
+      "action": "Assign an owner and due date for the pending item.",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "rule_id": "PENDING_ITEM"
+    }
+  ],
+  "review_queue": [],
+  "source_summaries": {
+    "degraded_intake.png": "This patient intake form for Avery Singh dated August 15, 2026, details a primary concern of a follow-up request, a potential sulfa drug allergy with unclear handwriting, and pending verification of patient-reported information."
+  },
+  "evidence_coverage": 1.0,
+  "metadata": {
+    "model_id": "gemini-3.6-flash",
+    "prompt_version": "extract-v1.0",
+    "pipeline_version": "1.0.0",
+    "duration_seconds": 35.15,
+    "source_count": 1,
+    "generated_at_utc": "2026-08-15T11:27:58.872435+00:00",
+    "warnings": []
+  }
+}

@@ -1,0 +1,10 @@
+SYNTHETIC DEMO - NOT A REAL PATIENT
+Physician follow-up note
+Patient: Maya Chen | Patient ID: SYN-1001 | DOB: 1968-04-12
+Encounter date: 2026-08-12 | North Valley Medical Center
+
+Community-acquired pneumonia is improving. Hypertension is stable.
+Medication reconciliation: azithromycin 250 mg by mouth once daily for 4 days is new;
+lisinopril 10 mg by mouth once daily remains active. No known drug allergies.
+Primary care follow-up with Dr. Nair is scheduled for 2026-08-19.
+No pending tests or urgent alerts are documented.

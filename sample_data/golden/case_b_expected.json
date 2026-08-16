@@ -1,0 +1,20 @@
+{
+  "priority": "REVIEW NOW",
+  "required_values": [
+    "Jordan Lee",
+    "SYN-2002",
+    "Penicillin",
+    "Metoprolol",
+    "6.2"
+  ],
+  "required_rules": [
+    "ALLERGY_RECORD_CONFLICT",
+    "MEDICATION_RECONCILIATION",
+    "SOURCE_CRITICAL_LAB",
+    "FOLLOW_UP_INCOMPLETE",
+    "PENDING_ITEM"
+  ],
+  "forbidden_rules": [
+    "IDENTITY_MISMATCH"
+  ]
+}

@@ -1,0 +1,783 @@
+{
+  "case_id": "CASE-6D456DAC24",
+  "priority": "REVIEW NOW",
+  "patient_display": "Jordan Lee (SYN-2002)",
+  "encounter_display": "2026-08-14 | North Valley Medical Center",
+  "narrative": {
+    "headline": "Review Now: 9 evidence-supported review item(s)",
+    "summary": "Jordan Lee (SYN-2002) has 20 evidence-backed facts extracted from 3 synthetic source document(s).",
+    "attention_summary": "Conflicting allergy documentation; Medication details require reconciliation; Source document contains an explicit urgent alert",
+    "uncertainty_summary": "3 cross-document discrepancy(ies) require verification."
+  },
+  "facts": [
+    {
+      "fact_id": "FACT-B858922704",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "CRITICAL RESULT: Potassium 6.2 mmol/L. Urgent clinician review is required.",
+      "qualifiers": {},
+      "status": "critical",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L. Urgent clinician review is required."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-4E8D3E8B41",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Potassium 6.2 mmol/L is documented as a critical result",
+      "qualifiers": {},
+      "status": "critical",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-2A1916B73E",
+      "category": "alert",
+      "label": "Source alert",
+      "value": "Urgent clinician review required",
+      "qualifiers": {},
+      "status": "urgent",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Urgent clinician review required."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-B380399917",
+      "category": "allergy",
+      "label": "No known drug allergies",
+      "value": "No known drug allergies",
+      "qualifiers": {
+        "reaction": null
+      },
+      "status": "denied",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-84E6B4B942",
+      "category": "allergy",
+      "label": "Penicillin",
+      "value": "Penicillin (rash)",
+      "qualifiers": {
+        "reaction": "rash"
+      },
+      "status": "confirmed",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Penicillin - rash (confirmed)."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Penicillin - rash"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-0AB876809E",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Atrial fibrillation",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Atrial fibrillation, current."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-A2A1EEB106",
+      "category": "condition",
+      "label": "Condition",
+      "value": "Hypertension",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Hypertension, current."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-9E422A2C2B",
+      "category": "encounter",
+      "label": "encounter_date",
+      "value": "2026-08-13 to 2026-08-14",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Encounter 2026-08-13 to 2026-08-14"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-5B09A04B6C",
+      "category": "encounter",
+      "label": "encounter_date",
+      "value": "2026-08-14",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Encounter date: 2026-08-14"
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "2026-08-14"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-F65128C3DE",
+      "category": "encounter",
+      "label": "facility",
+      "value": "North Valley Medical Center",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Facility North Valley Medical Center"
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "North Valley Medical Center"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-22098847E2",
+      "category": "follow_up",
+      "label": "Follow-up",
+      "value": "Cardiology follow-up",
+      "qualifiers": {
+        "provider": "cardiology",
+        "timeframe": null
+      },
+      "status": "pending",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Cardiology follow-up is pending; provider is cardiology and the appointment date is not specified."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-656CAB27B8",
+      "category": "follow_up",
+      "label": "Follow-up",
+      "value": "Primary care follow-up",
+      "qualifiers": {
+        "provider": null,
+        "timeframe": "within one week"
+      },
+      "status": "recommended",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Primary care follow-up is recommended within one week; appointment is not yet scheduled."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-EAA66666A6",
+      "category": "identity",
+      "label": "date_of_birth",
+      "value": "1957-11-03",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Date of birth 1957-11-03"
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "DOB: 1957-11-03"
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "1957-11-03"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-179B7083E9",
+      "category": "identity",
+      "label": "patient_id",
+      "value": "SYN-2002",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Patient ID SYN-2002"
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Patient ID: SYN-2002"
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "SYN-2002"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-8F0CA033CF",
+      "category": "identity",
+      "label": "patient_name",
+      "value": "Jordan Lee",
+      "qualifiers": {},
+      "status": "stated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Patient Jordan Lee"
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Patient: Jordan Lee"
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Jordan Lee"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-CF8C4D6728",
+      "category": "lab",
+      "label": "Potassium",
+      "value": "Potassium: 6.2 mmol/L",
+      "qualifiers": {
+        "unit": "mmol/L",
+        "reference_range": null,
+        "collected_date": null,
+        "source_flag": "critical"
+      },
+      "status": "critical",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-99996A1579",
+      "category": "medication",
+      "label": "Metoprolol",
+      "value": "Metoprolol - 25 mg - by mouth - twice daily",
+      "qualifiers": {
+        "dose": "25 mg",
+        "route": "by mouth",
+        "frequency": "twice daily"
+      },
+      "status": "active",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Metoprolol 25 mg by mouth twice daily - active."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-273BA57C51",
+      "category": "medication",
+      "label": "Metoprolol",
+      "value": "Metoprolol - 50 mg - by mouth - twice daily",
+      "qualifiers": {
+        "dose": "50 mg",
+        "route": "by mouth",
+        "frequency": "twice daily"
+      },
+      "status": "changed",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily - changed dose."
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-273BA57C51",
+      "category": "medication",
+      "label": "Metoprolol",
+      "value": "Metoprolol - 50 mg - by mouth - twice daily",
+      "qualifiers": {
+        "dose": "50 mg",
+        "route": "by mouth",
+        "frequency": "twice daily"
+      },
+      "status": "active",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily"
+        }
+      ]
+    },
+    {
+      "fact_id": "FACT-9DA0762F2A",
+      "category": "pending_item",
+      "label": "Pending item",
+      "value": "Repeat potassium test",
+      "qualifiers": {},
+      "status": "current",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Repeat potassium test is pending."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Repeat potassium test remains pending."
+        }
+      ]
+    }
+  ],
+  "discrepancies": [
+    {
+      "discrepancy_id": "DISC-4A3E4E5E51",
+      "category": "allergy",
+      "title": "NKDA conflicts with a documented drug allergy",
+      "values": [
+        "No known drug allergies",
+        "Penicillin"
+      ],
+      "severity": "high",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Penicillin - rash (confirmed)."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Penicillin - rash"
+        }
+      ]
+    },
+    {
+      "discrepancy_id": "DISC-37186D40BF",
+      "category": "medication",
+      "title": "Medication details differ for Metoprolol",
+      "values": [
+        "Metoprolol / 25 mg / by mouth / twice daily / active",
+        "Metoprolol / 50 mg / by mouth / twice daily / active",
+        "Metoprolol / 50 mg / by mouth / twice daily / changed"
+      ],
+      "severity": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Metoprolol 25 mg by mouth twice daily - active."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily - changed dose."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily"
+        }
+      ]
+    },
+    {
+      "discrepancy_id": "DISC-76168158D2",
+      "category": "other",
+      "title": "Conflicting encounter date",
+      "values": [
+        "2026-08-13 to 2026-08-14",
+        "2026-08-14"
+      ],
+      "severity": "medium",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Encounter 2026-08-13 to 2026-08-14"
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Encounter date: 2026-08-14"
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "2026-08-14"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "rule_id": "ALLERGY_RECORD_CONFLICT",
+      "priority": "REVIEW NOW",
+      "title": "Conflicting allergy documentation",
+      "rationale": "The sources do not agree on allergy status; a human must reconcile the record.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "No known drug allergies (NKDA)."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Penicillin - rash (confirmed)."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Penicillin - rash"
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_EXPLICIT_ALERT",
+      "priority": "REVIEW NOW",
+      "title": "Source document contains an explicit urgent alert",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L. Urgent clinician review is required."
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_EXPLICIT_ALERT",
+      "priority": "REVIEW NOW",
+      "title": "Source document contains an explicit urgent alert",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_EXPLICIT_ALERT",
+      "priority": "REVIEW NOW",
+      "title": "Source document contains an explicit urgent alert",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Urgent clinician review required."
+        }
+      ]
+    },
+    {
+      "rule_id": "SOURCE_CRITICAL_LAB",
+      "priority": "REVIEW NOW",
+      "title": "Source-labelled critical result: Potassium",
+      "rationale": "The source explicitly labels this result critical; no independent interpretation was added.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "CRITICAL RESULT: Potassium 6.2 mmol/L."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Potassium 6.2 mmol/L is documented as a critical result."
+        }
+      ]
+    },
+    {
+      "rule_id": "FOLLOW_UP_INCOMPLETE",
+      "priority": "REVIEW SOON",
+      "title": "Follow-up details are incomplete",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "evidence": [
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Cardiology follow-up is pending; provider is cardiology and the appointment date is not specified."
+        }
+      ]
+    },
+    {
+      "rule_id": "FOLLOW_UP_INCOMPLETE",
+      "priority": "REVIEW SOON",
+      "title": "Follow-up details are incomplete",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Primary care follow-up is recommended within one week; appointment is not yet scheduled."
+        }
+      ]
+    },
+    {
+      "rule_id": "MEDICATION_RECONCILIATION",
+      "priority": "REVIEW SOON",
+      "title": "Medication details require reconciliation",
+      "rationale": "Dose, frequency, route, or medication status differs across sources.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Metoprolol 25 mg by mouth twice daily - active."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily - changed dose."
+        },
+        {
+          "source_id": "SRC-2810D5A0",
+          "filename": "intake_form.png",
+          "page": 1,
+          "quote": "Metoprolol 50 mg by mouth twice daily"
+        }
+      ]
+    },
+    {
+      "rule_id": "PENDING_ITEM",
+      "priority": "REVIEW SOON",
+      "title": "Pending item requires ownership",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "evidence": [
+        {
+          "source_id": "SRC-5F4AC6FA",
+          "filename": "discharge_summary.pdf",
+          "page": 1,
+          "quote": "Repeat potassium test is pending."
+        },
+        {
+          "source_id": "SRC-4C41DE90",
+          "filename": "progress_note.txt",
+          "page": 1,
+          "quote": "Repeat potassium test remains pending."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "ACT-9D722D93CB",
+      "owner": "clinician",
+      "urgency": "REVIEW NOW",
+      "action": "Review the source-labelled urgent alert and document the disposition.",
+      "rationale": "Urgency is copied from the source document and requires clinician review.",
+      "rule_id": "SOURCE_EXPLICIT_ALERT"
+    },
+    {
+      "action_id": "ACT-26A9000C2A",
+      "owner": "clinician",
+      "urgency": "REVIEW NOW",
+      "action": "Review the source-labelled critical result and document the disposition.",
+      "rationale": "The source explicitly labels this result critical; no independent interpretation was added.",
+      "rule_id": "SOURCE_CRITICAL_LAB"
+    },
+    {
+      "action_id": "ACT-A3333E670E",
+      "owner": "nurse",
+      "urgency": "REVIEW NOW",
+      "action": "Reconcile allergy status against the authoritative patient record.",
+      "rationale": "The sources do not agree on allergy status; a human must reconcile the record.",
+      "rule_id": "ALLERGY_RECORD_CONFLICT"
+    },
+    {
+      "action_id": "ACT-A402C95B42",
+      "owner": "care-coordinator",
+      "urgency": "REVIEW SOON",
+      "action": "Confirm the follow-up provider, timeframe, and appointment status.",
+      "rationale": "The source does not provide a complete provider and timeframe for follow-up.",
+      "rule_id": "FOLLOW_UP_INCOMPLETE"
+    },
+    {
+      "action_id": "ACT-A98C42343F",
+      "owner": "care-coordinator",
+      "urgency": "REVIEW SOON",
+      "action": "Assign an owner and due date for the pending item.",
+      "rationale": "The document explicitly identifies an unresolved or pending item.",
+      "rule_id": "PENDING_ITEM"
+    },
+    {
+      "action_id": "ACT-FB9010DC02",
+      "owner": "nurse",
+      "urgency": "REVIEW SOON",
+      "action": "Reconcile medication dose, frequency, route, and current status.",
+      "rationale": "Dose, frequency, route, or medication status differs across sources.",
+      "rule_id": "MEDICATION_RECONCILIATION"
+    }
+  ],
+  "review_queue": [
+    "FACT-B380399917",
+    "FACT-84E6B4B942",
+    "FACT-9E422A2C2B",
+    "FACT-5B09A04B6C",
+    "FACT-99996A1579",
+    "FACT-273BA57C51",
+    "FACT-273BA57C51",
+    "DISC-4A3E4E5E51",
+    "DISC-37186D40BF",
+    "DISC-76168158D2"
+  ],
+  "source_summaries": {
+    "discharge_summary.pdf": "Discharge summary for Jordan Lee from North Valley Medical Center covering an encounter from 2026-08-13 to 2026-08-14, noting current atrial fibrillation, current hypertension, a critical potassium result of 6.2 mmol/L requiring urgent review, active metoprolol, and recommended primary care follow-up within one week.",
+    "progress_note.txt": "Progress note for Jordan Lee on 2026-08-14 at North Valley Medical Center detailing a critical potassium level requiring urgent clinician review, a changed Metoprolol dose, and pending repeat potassium testing and cardiology follow-up.",
+    "intake_form.png": "Patient intake form for Jordan Lee on 2026-08-14 regarding post-discharge medication and lab review."
+  },
+  "evidence_coverage": 1.0,
+  "metadata": {
+    "model_id": "gemini-3.6-flash",
+    "prompt_version": "extract-v1.0",
+    "pipeline_version": "1.0.0",
+    "duration_seconds": 161.25,
+    "source_count": 3,
+    "generated_at_utc": "2026-08-15T11:07:14.556471+00:00",
+    "warnings": [
+      "lab_report.pdf: Gemini request failed: Server disconnected without sending a response."
+    ]
+  }
+}

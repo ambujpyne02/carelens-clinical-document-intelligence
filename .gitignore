@@ -1,0 +1,17 @@
+.venv/
+.venv.old-windows-backup/
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+tmp/
+output/*.pptx
+node_modules/
+*.log
+submission/*.zip
+superseded_submission_archive.zip
+
