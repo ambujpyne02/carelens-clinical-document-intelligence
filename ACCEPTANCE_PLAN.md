@@ -24,15 +24,6 @@ Frame the POC as a **care-transition review accelerator**, not a general medical
 7. Every PDF and every slide is rendered and visually inspected.
 8. The submission archive contains no credential or virtual environment.
 
-## Five-minute demo script
-
-1. **0:00–0:40 — problem:** explain that transitions of care require reviewing fragmented documents under time pressure; show the synthetic-only and human-review boundaries.
-2. **0:40–1:15 — input:** choose Case B and point out the mixed PDF, image, and text sources.
-3. **1:15–2:40 — outcome:** run analysis; lead with `REVIEW NOW`, then show the critical source label, allergy conflict, medication dose discrepancy, pending repeat test, and missing follow-up.
-4. **2:40–3:35 — trust:** expand a fact to show filename, page, quote, and confidence; open discrepancies and audit metadata.
-5. **3:35–4:15 — actionability:** show owner-specific coordination actions and clarify that these are verification/routing steps, not treatment recommendations.
-6. **4:15–4:45 — resilience:** mention deterministic routing, schema validation, synthesis fallback, input limits, and the degraded-image test.
-7. **4:45–5:00 — close:** download the Markdown review brief and state the next production gates: prospective evaluation, workflow integration, security/privacy review, and clinical governance.
 
 ## Likely evaluator questions
 
